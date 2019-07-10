@@ -20,4 +20,6 @@ public class CRUDApplication {
 		registrationBean.addUrlMappings("/console/*");
 		return registrationBean;
 	}
+
+
 }
