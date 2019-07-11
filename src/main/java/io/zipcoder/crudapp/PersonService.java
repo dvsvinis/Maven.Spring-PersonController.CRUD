@@ -21,12 +21,21 @@ public class PersonService {
         return repository.findOne(id);
     }
 
-    public Person save(Person person) {
+    public Person create(Person person) {
         return repository.save(person);
     }
 
-    public void delete(Long id){
-        repository.delete(id);
+    public Person update(Long id, Person p){
+        Person person = repository.findOne(id);
+        person.setFirstName(p.getFirstName());
+        person.setLastName(p.getLastName());
+        return repository.save(person);
     }
+
+    public Boolean delete(Long id){
+        repository.delete(id);
+        return true;
+    }
+
 
 }
