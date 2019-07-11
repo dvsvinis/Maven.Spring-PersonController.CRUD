@@ -13,7 +13,7 @@ public class PersonService {
         this.repository = repository;
     }
 
-    public Iterable<Person> index() {
+    public Iterable<Person> findAll() {
         return repository.findAll();
     }
 
@@ -21,20 +21,12 @@ public class PersonService {
         return repository.findOne(id);
     }
 
-    public Person create(Person person) {
+    public Person save(Person person) {
         return repository.save(person);
     }
 
-    public Person update(Long id, Person personData) {
-        Person person = repository.findOne(id);
-        person.setFirstName(personData.getFirstName());
-        person.setLastName(personData.getLastName());
-        return repository.save(person);
-    }
-
-    public Boolean delete(Long id){
+    public void delete(Long id){
         repository.delete(id);
-        return true;
     }
 
 }

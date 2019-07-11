@@ -8,15 +8,15 @@ public class PersonController {
 
 
 
-    Person createPerson(Person p){}
-
-    Person getPerson(int id){}
-
-    List<Person> getPersonList(){}
-
-    Person updatePerson(Person p){}
-
-    void DeletePerson(int id){}
+//    Person createPerson(Person p){}
+//
+//    Person getPerson(int id){}
+//
+//    List<Person> getPersonList(){}
+//
+//    Person updatePerson(Person p){}
+//
+//    void DeletePerson(int id){}
 
 
 }
